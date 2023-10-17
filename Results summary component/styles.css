@@ -1,0 +1,243 @@
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --background-slate-blue: hsl(252, 100%, 67%);
+  --background-royal-blue: hsl(241, 81%, 54%);
+  --circle-violet: hsla(256, 72%, 46%, 1);
+  --circle-persian-blue: hsla(241, 72%, 46%, 0);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-grey: hsl(224, 30%, 27%);
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  width: 375px;
+  margin: 0 auto;
+}
+
+.result-container {
+  background: linear-gradient(
+    var(--background-slate-blue),
+    var(--background-royal-blue)
+  );
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.result-container__title {
+  color: var(--light-lavender);
+  text-align: center;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.circle {
+  background: linear-gradient(var(--circle-violet), var(--circle-persian-blue));
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle__score--first {
+  color: var(--white);
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.circle__score--second {
+  color: hsla(241, 100%, 89%, 0.5);
+  font-size: 0.8rem;
+}
+
+.result-container__message {
+  color: var(--pale-blue);
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 500;
+}
+
+.result-container__message--description {
+  color: hsla(241, 100%, 89%, 0.8);
+  text-align: center;
+  font-size: 0.8rem;
+  width: 70%;
+  margin: 10px auto;
+  padding-bottom: 30px;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 25px 25px;
+}
+
+.summary-container__title {
+  color: var(--dark-grey);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 20px 1fr 1fr;
+  column-gap: 10px;
+  padding: 15px;
+  font-size: 0.9rem;
+  border-radius: 9px;
+  margin-bottom: 15px;
+  color: var(--dark-grey);
+}
+
+.box p:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.fraction {
+  color: hsla(224, 30%, 27%, 0.4);
+  font-weight: 700;
+}
+
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.reaction:before {
+  content: url(./assets/images/icon-reaction.svg);
+}
+
+.reaction p:first-child {
+  color: var(--light-red);
+}
+
+.reaction p:last-child {
+  text-align: right;
+  font-weight: 700;
+}
+
+.memory {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.memory:before {
+  content: url(./assets/images/icon-memory.svg);
+}
+
+.memory p:first-child {
+  color: var(--orangey-yellow);
+}
+
+.memory p:last-child {
+  text-align: right;
+  font-weight: 700;
+}
+
+.verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.verbal:before {
+  content: url(./assets/images/icon-verbal.svg);
+}
+
+.verbal p:first-child {
+  color: var(--green-teal);
+}
+
+.verbal p:last-child {
+  text-align: right;
+  font-weight: 700;
+}
+
+.visual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.visual:before {
+  content: url(./assets/images/icon-visual.svg);
+}
+
+.visual p:first-child {
+  color: var(--cobalt-blue);
+}
+
+.visual p:last-child {
+  text-align: right;
+  font-weight: 700;
+}
+
+.result-container__button {
+  background-color: var(--dark-grey);
+  border: none;
+  padding: 15px;
+  color: var(--white);
+  font-size: 1rem;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 952px) {
+  .container {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    grid-template-rows: 1fr;
+    width: 60%;
+    border-radius: 35px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+  }
+
+  .result-container {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .result-container__message--description {
+   width: 65%;
+  }
+  .summary-container {
+    width: 100%;
+    padding: 30px 40px;
+    margin: 0 auto;
+  }
+
+  .result-container__button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+}
